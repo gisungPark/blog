@@ -17,19 +17,33 @@ import com.spring.web.dto.UsergraphDto;
 
 @Mapper
 public interface PersonalDao {
-	public List<BlogPostDto> showBlogContents(String blogid);
-	public List<MemoContentsDto> showMemo(String memoid);
-	public List<Map<String, Object>> likeBloger(String uid);
-	public List<BlogPostDto> likeBlogContents(String uid);
-	public List<JandiDto> jandi(String blogid);
-	public List<UsergraphDto> usergraph(String blogid); 
-	public void blogerLike(BlogerLikeDto bld);
-	public void blogerUnlike(BlogerLikeDto bld);
-	public BlogerLikeDto readBlogerLike(BlogerLikeDto bld);
-	public UserInfoDto findUser(String blogid);
-	public BlogDto findBlog(String blogid);
-	public int modifyBlogCover(Map<String, Object> cover);
-	List<HashtagDto> getHashtagOfPost(int blogContentsId) throws SQLException;
-	Map<String, String> getUserProfile(String blogId) throws SQLException;
-	List<Integer> getCommentInfo(int blogContentsId) throws SQLException;
+    public List<BlogPostDto> showBlogContents(String blogid);
+
+    public List<MemoContentsDto> showMemo(String memoid);
+
+    public List<Map<String, Object>> likeBloger(String uid);
+
+    public List<BlogPostDto> likeBlogContents(String uid);
+
+    public List<JandiDto> jandi(String blogid);
+
+    public List<UsergraphDto> usergraph(String blogid);
+
+    public void blogerLike(BlogerLikeDto bld);
+
+    public void blogerUnlike(BlogerLikeDto bld);
+
+    public BlogerLikeDto readBlogerLike(BlogerLikeDto bld);
+
+    public UserInfoDto findUser(String blogid);
+
+    public BlogDto findBlog(String blogid);
+
+    public int modifyBlogCover(Map<String, Object> cover);
+
+    List<HashtagDto> getHashtagOfPost(int blogContentsId) throws SQLException;
+
+    Map<String, String> getUserProfile(String blogId) throws SQLException;
+
+    List<Integer> getCommentInfo(int blogContentsId) throws SQLException;
 }

@@ -10,10 +10,14 @@ import com.spring.web.dto.MemoContentsDto;
 @Mapper
 public interface MemoDao {
 
-	MemoContentsDto getMemo(int memoNum) throws SQLException;
-	int writeMemo(MemoContentsDto memo);
-	List<MemoContentsDto> listMemo(String memoId) throws SQLException;
-	int modifyMemo(MemoContentsDto memo);
-	int deleteMemo(int memoNum);
-	
+    MemoContentsDto getMemo(int memoNum) throws SQLException;
+
+    int writeMemo(MemoContentsDto memo);
+
+    List<MemoContentsDto> listMemo(String memoId) throws SQLException;
+
+    int modifyMemo(MemoContentsDto memo);
+
+    int deleteMemo(int memoNum);
+
 }
